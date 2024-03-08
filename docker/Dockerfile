@@ -14,5 +14,9 @@ RUN apt-get update && apt-get install -y \
 # 使用 pip 安装 JupyterLab
 RUN pip install jupyterlab
 
+COPY requirements.txt .
+# 安装 Python 依赖项
+RUN pip install --no-cache-dir -r requirements.txt
+
 # 配置 JupyterLab 服务器以便通过网络访问
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
