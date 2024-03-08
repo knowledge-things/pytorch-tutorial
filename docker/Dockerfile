@@ -5,9 +5,10 @@ FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-devel
 WORKDIR /workspace
 
 # 安装必要的软件包和依赖项
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install  --no-install-recommends -y \
     python3 \
     python3-pip \
+    git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
