@@ -12,14 +12,6 @@ flagged
 .ipynb_checkpoints
 __pycache__
 Untitled*
-experiments
-third_party/REKD
-Dockerfile
-hloc/matchers/dedode.py
-gradio_cached_examples
-*.mp4
-hloc/matchers/quadtree.py
-third_party/QuadTreeAttention
 desktop.ini
 
 .DS_Store
